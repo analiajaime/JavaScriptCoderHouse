@@ -18,12 +18,12 @@ function iniciarPedido() {
     };
 
     while (seguirComprando) {
-        let eleccion = prompt("Ingrese el código de la hamburguesa que desea agregar a su pedido (1: Hamburguesa Simple- 2 Doble carnes -3 Doble con jamón y queso - 4 - Veggie - 5 Doble completa con papas y gaseosa) o '6' para terminar el pedido:");
+        let eleccion = prompt("Ingrese el código de la hamburguesa que desea agregar a su pedido (1: Hamburguesa Simple - 2: Doble carnes - 3: Doble con jamón y queso - 4: Veggie - 5: Doble completa con papas y gaseosa) o '6' para terminar el pedido:");
         if (eleccion === "6") {
             seguirComprando = false;
         } else if (precios[eleccion]) {
             total += precios[eleccion];
-            alert(`Hamburguesa ${eleccion} agregada. Total actual: $${total}`);
+            alert(`Hamburguesa ${eleccion} agregada. Total que llevas gastado: $${total}`);
         } else {
             alert("Opción no válida. Por favor, ingrese un número entre 1 y 6.");
         }
